@@ -237,9 +237,9 @@ UIColor *UIColorDefaultForColorInProgressLabelColorTableKey(ProgressLabelColorTa
     CGContextRef context = UIGraphicsGetCurrentContext();
 
     // The Circle
-    CGContextSetStrokeColorWithColor(context, fillColor.CGColor);
+    CGContextSetFillColorWithColor(context, fillColor.CGColor);
     CGContextSetLineWidth(context, _backBorderWidth);
-    CGContextAddEllipseInRect(context, circleRect);
+    CGContextFillEllipseInRect(context, circleRect);
     CGContextStrokePath(context);
 
     // Back border
